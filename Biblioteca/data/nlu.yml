@@ -1,0 +1,19 @@
+version: "3.1"
+nlu:
+  - intent: buscar_livro_titulo
+    examples: |
+      - Quero procurar um livro chamado *Harry Potter*.
+      - Você tem *O Hobbit* disponível?
+      - Me mostre livros de *Dom Casmurro*.
+      
+  - intent: buscar_livro_autor
+    examples: |
+      - Quero livros de *J.K. Rowling*.
+      - Existe algum livro de *George Orwell*?
+      - Me mostre livros de *Machado de Assis*.
+      
+  - intent: buscar_livro_assunto
+    examples: |
+      - Me fale sobre livros de *história*.
+      - Eu quero livros sobre *psicologia*.
+      - Você tem livros sobre *ciência*?

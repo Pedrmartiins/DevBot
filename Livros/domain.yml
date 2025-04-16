@@ -1,0 +1,45 @@
+version: "3.1"
+
+intents:
+  - saudacao
+  - buscar_livro_por_titulo
+  - buscar_livro_por_autor
+  - despedida
+entities: 
+  - titulo
+  - autor
+  - assunto
+slots:
+  titulo:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: titulo
+
+  autor:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: autor
+
+responses:
+  utter_saudacao:
+  - text: "Olá como posso te ajudar a encontrar um livro?"
+
+  utter_despedida:
+  - text: "até logo! Volte sempre para novas descobertas literarias"
+    
+
+  utter_perguntar_titulo:
+  - text: "Qual e o titulo do livro que voce procura?"
+
+  utter_perguntar_autor:
+  - text: "Qual o autor que voce quer pesquisar? "
+
+actions:
+  - action_buscar_por_titulo
+  - action_buscar_por_autor
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
