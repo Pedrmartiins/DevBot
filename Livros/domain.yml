@@ -4,11 +4,14 @@ intents:
   - saudacao
   - buscar_livro_por_titulo
   - buscar_livro_por_autor
+  - buscar_livro_por_assunto  # Adicionada a intenção de buscar por assunto
   - despedida
+
 entities: 
   - titulo
   - autor
   - assunto
+
 slots:
   titulo:
     type: text
@@ -22,23 +25,56 @@ slots:
       - type: from_entity
         entity: autor
 
+  assunto:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: assunto  # Slot para o assunto
+
 responses:
   utter_saudacao:
-  - text: "Olá como posso te ajudar a encontrar um livro?"
+    - text: "Olá, como posso te ajudar a encontrar um livro?"
+    - text: "Oi! Em que posso te ajudar hoje? Procurando um livro?"
+    - text: "Olá! Que tipo de livro você está procurando hoje?"
 
   utter_despedida:
-  - text: "até logo! Volte sempre para novas descobertas literarias"
-    
+    - text: "Até logo! Volte sempre para novas descobertas literárias."
+    - text: "Tchau, até a próxima! Espero que encontre ótimos livros."
+    - text: "Foi um prazer te ajudar. Até logo!"
 
   utter_perguntar_titulo:
-  - text: "Qual e o titulo do livro que voce procura?"
+    - text: "Qual é o título do livro que você procura?"
+    - text: "Me diga o título do livro que você está buscando."
+    - text: "Sobre qual livro você gostaria de saber mais?"
 
   utter_perguntar_autor:
-  - text: "Qual o autor que voce quer pesquisar? "
+    - text: "Qual o autor que você quer pesquisar?"
+    - text: "De qual autor você está procurando os livros?"
+    - text: "Me fale o nome do autor que você quer encontrar."
+
+  utter_perguntar_assunto:
+    - text: "Qual é o assunto ou tema do livro que você procura?"
+    - text: "Me diga o assunto que você está procurando nos livros."
+    - text: "Qual é o tema ou assunto que você gostaria de pesquisar?"
+
+  # Respostas quando a busca for bem-sucedida
+  utter_livro_encontrado_por_titulo:
+    - text: "Encontrei alguns livros com esse título. Deixe-me mostrar."
+
+  utter_livro_encontrado_por_autor:
+    - text: "Aqui estão alguns livros de [autor]. Veja se algum te interessa."
+
+  utter_livro_encontrado_por_assunto:
+    - text: "Aqui estão alguns livros sobre o assunto que você mencionou."
+
+  # Respostas quando não há resultados
+  utter_erro_busca:
+    - text: "Desculpe, não encontrei nenhum livro com esses dados."
 
 actions:
   - action_buscar_por_titulo
   - action_buscar_por_autor
+  - action_buscar_por_assunto  # Ação de busca por assunto foi adicionada
 
 session_config:
   session_expiration_time: 60

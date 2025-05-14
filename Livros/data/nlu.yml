@@ -7,22 +7,89 @@ nlu:
     - ola
     - bom dia
     - boa tarde
+    - olá, tudo bem?
+    - e aí, como vai?
+    - como você está?
+    - saudacoes
+    - oi, você está aí?
+    - olá, posso te ajudar?
 
 - intent: buscar_livro_por_titulo
   examples: |
     - quero um livro chamado [Dom Casmurro](titulo)
     - estou procurando um livro [1984](titulo)
     - tem o livro [O Pequeno Principe](titulo)?
-    
+    - você tem [A Moreninha](titulo)?
+    - gostaria de ler [O Primo Basílio](titulo)
+    - estou atrás de [Harry Potter e a Pedra Filosofal](titulo)
+    - tem algum livro chamado [O Hobbit](titulo)?
+    - estou procurando o livro [A Culpa é das Estrelas](titulo)
+    - onde posso encontrar o livro [Sapiens](titulo)?
 
 - intent: buscar_livro_por_autor
   examples: |
     - quero livros do [Machado de Assis](autor)
     - me mostre obras escritas por [J.K Rowling](autor)
-    
+    - você tem livros do [José Saramago](autor)?
+    - quais livros o [Gabriel Garcia Márquez](autor) escreveu?
+    - estou procurando livros de [Clarice Lispector](autor)
+    - você tem alguma obra de [Virginia Woolf](autor)?
+    - procure livros do [George Orwell](autor)
+    - gostaria de ler algo de [Monteiro Lobato](autor)
+    - você tem livros de [Paulo Coelho](autor)?
+
+- intent: buscar_livro_por_assunto
+  examples: |
+    - quero um livro sobre [psicologia](assunto)
+    - me mostre livros de [filosofia](assunto)
+    - você tem livros sobre [história](assunto)?
+    - quero aprender mais sobre [economia](assunto)
+    - procure livros sobre [ciência política](assunto)
+    - tem algum livro sobre [biografias](assunto)?
+    - estou interessado em [autodesenvolvimento](assunto)
+    - me sugira livros sobre [arte](assunto)
+    - qual livro sobre [futuro da tecnologia](assunto) você tem?
+    - livros sobre [empreendedorismo](assunto)
+    - tem algum livro sobre [meditação](assunto)?
+    - estou procurando um livro sobre [relacionamentos](assunto)
+    - você tem livros sobre [ciências naturais](assunto)?
+    - me indique livros sobre [literatura clássica](assunto)
+    - qual livro sobre [educação](assunto) você tem?
+    - procure livros sobre [motivação](assunto)
+    - livros sobre [futebol](assunto)
+    - tenho interesse em livros sobre [cultura pop](assunto)
+    - me mostre livros sobre [história medieval](assunto)
+    - quero livros sobre [misticismo](assunto)
+    - estou interessado em livros sobre [neurociência](assunto)
+    - você tem algo sobre [comportamento humano](assunto)?
+    - me mostre livros sobre [sociedade](assunto)
+    - onde posso encontrar livros sobre [esportes](assunto)?
+    - me fale sobre livros de [biotecnologia](assunto)
+    - você tem livros sobre [construção de equipes](assunto)?
+    - quero um livro sobre [astronomia](assunto)
+    - tenho interesse em livros sobre [design gráfico](assunto)
+    - estou procurando algo sobre [culinária](assunto)
+    - você tem livros sobre [literatura portuguesa](assunto)?
+    - me mostre livros sobre [educação infantil](assunto)
+    - qual livro você tem sobre [filosofia oriental](assunto)?
+    - você pode me sugerir algo sobre [coaching](assunto)?
+    - tem livros sobre [psicanálise](assunto)?
+    - estou procurando um livro sobre [arqueologia](assunto)
+    - tem algo sobre [escrita criativa](assunto)?
+    - me mostre livros sobre [sociedade digital](assunto)
+
+
+
 - intent: despedida
   examples: |
     - tchau
     - até mais
     - valeu
-
+    - tchauzinho
+    - até logo
+    - foi bom falar com você
+    - nos vemos depois
+    - até a próxima
+    - até mais tarde
+    - fico por aqui, tchau
+    - até logo, obrigada!
